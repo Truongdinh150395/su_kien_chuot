@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện click chuột</title>
+</head>
+<body>
+    <form>
+        <img id="myImag" src="ball.png" height="100px" width="100px" style="">
+        <p>Click button below to move the image to right</p>
+        <input type="button" value="click Me" onclick="moveRight()" >
+    </form>
+    <script>
+    //tạo biến ìmgObi để lưu ảnh
+        let imgObj = null;
+        //imgObj = document.getElementById('myImag');
+       // console.log(imgObj.id);
+        function  hinhanh() {
+          imgObj = document.getElementById('myImag');
+          //dùng javascrip để thay đổi thuộc tính css
+          imgObj.style.position = 'relative';
+          imgObj.style.left = '0px';
+        }
+    //    tạo hàm moveRight() để di chuyển quả bóng
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + "px";
+        }
+        window.onload = hinhanh;
+    </script>
+</body>
+</html>
